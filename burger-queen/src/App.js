@@ -1,14 +1,16 @@
 import React from 'react';
-import {BrowserRouter} from "react-router-dom";
-import SignUp from "./Components/SignUp";
+import {BrowserRouter, Route} from "react-router-dom";
+import Navbar from "./Components/Navbar";
 import SignUpWaiters from "./Components/SignUpMeseros"
 
 function App() {
   return(
-    <div className={"App"}>
-      <SignUp/>
-      <SignUpWaiters/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar title="Burger Queen"/>
+        <Route exact path="/Meseros" render={() => <SignUpWaiters/>} />
+      </div>
+    </BrowserRouter>
   );
   
 };
