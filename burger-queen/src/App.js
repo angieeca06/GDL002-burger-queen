@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {BrowserRouter} from "react-router-dom";
 import SignUp from "./Components/SignUp";
+import SignUpWaiters from "./Components/SignUpMeseros"
 
 function App() {
   return(
-    <SignUp/>
+    <div className={"App"}>
+      <SignUp/>
+      <SignUpWaiters/>
+    </div>
   );
   
 };

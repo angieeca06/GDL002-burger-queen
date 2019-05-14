@@ -1,0 +1,46 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: antiquewhite;
+}
+
+code{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.App{
+    background-color: aquamarine;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    background-color: aquamarine;
+    padding: 10px 20px;
+}
+
+.nav-menu li{
+    display: inline-block;
+    list-style: none;
+}
+
+.nav-bar{
+    display: inline-block;
+    margin: 5px;
+    border: 1px solid gray;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 3px 8px;
+    background-color: #ffff;
+}
+
+.nav-bar:hover{
+    border: 1px solid black;
+    background-color: azure;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
