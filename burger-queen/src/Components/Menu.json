@@ -1,0 +1,74 @@
+[
+    {
+        "Name": "Café americano",
+        "Sabores": null,
+        "Price": "$5",
+        "Image": ""
+    },
+    {
+        "Name": "Café con leche",
+        "Sabores": null,
+        "Price": "$7",
+        "Image": ""
+    },
+    {
+        "Name": "Sandwich de jamón y queso",
+        "Sabores": null,
+        "Price": "$10",
+        "Image": ""
+    },
+    {
+        "Name": "Jugo de frutas natural",
+        "Sabores" : ["Naranja", "Zanahoria"],
+        "Price": "$7",
+        "Image": ""
+    },
+    {
+        "Name": "Hamburguesa simple",
+        "Sabores": ["Res", "Pollo", "Vegetariana"],
+        "Price": "$10",
+        "Image": ""
+    },
+    {
+        "Name": "Hamburguesa doble",
+        "Sabores": ["Res", "Pollo", "Vegetariana"],
+        "Price": "$15",
+        "Image": ""
+    },
+    {
+        "Name": "Papas fritas",
+        "Sabores": null,
+        "Price": "$5",
+        "Image": ""
+    },
+    {
+        "Name": "Aros de cebolla",
+        "Sabores": null,
+        "Price": "$5",
+        "Image": ""
+    },
+    {
+        "Name": "Agua 500ml",
+        "Sabores": null,
+        "Price": "$5",
+        "Image": ""
+    },
+    {
+        "Name": "Agua 750ml",
+        "Sabores": null,
+        "Price": "$7",
+        "Image": ""
+    },
+    {
+        "Name": "Gaseosa 500ml",
+        "Sabores": null,
+        "Price": "$7",
+        "Image": ""
+    },
+    {
+        "Name": "Gaseosa 750ml",
+        "Sabores": null,
+        "Price": "$10",
+        "Image": ""
+    }
+]
