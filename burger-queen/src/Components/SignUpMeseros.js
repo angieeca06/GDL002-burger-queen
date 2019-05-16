@@ -3,14 +3,38 @@ import {Link} from "react-router-dom";
 
 const signUpWaiters = props =>{
     return(
-        <div className= {"main-container"}>
-            <div className= {"container"}>
-                <input className="EmailWaiter" type={"email"} placeholder={"Email"}></input>
-                <input className="NameWaiter" type={"text"} placeholder={"Nombre"}></input>
-                <input className="IdWaiter" type={"text"} placeholder={"# de empleado"}></input>
-                <button><Link className={`btnNextWaiters`} to="Menu">Siguiente</Link></button>
+        <form>
+            <div className= "form-row">
+                <div className= "col-md-8 mb-6">
+                <br/>
+                    <label for="validationCustom01">Correo electrónico</label>
+                    <input type={"email"} className="form-control" id="validationCustom01" placeholder="Correo electrónico" required></input>
+                    <div class="valid-feedback">
+                        Muy bien¡
+                    </div>
+                </div>
+                <br/>
+                <div className= "col-md-8 mb-6">
+                <br/>
+                    <label for="validationCustom02">Nombre</label>
+                    <input type={"text"} className="form-control" id="validationCustom02" placeholder="Nombre" required></input>
+                    <div class="valid-feedback">
+                        Muy bien¡
+                    </div>
+                </div>
+                <br/>
+                <div className= "col-md-8 mb-6">
+                <br/>
+                    <label for="validationCustom03"># de empleado</label>
+                    <input type={"email"} className="form-control" id="validationCustom03" placeholder="# de empleado" required></input>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <br/>
+                </div>
             </div>
-        </div>
+            <Link className=" btn btn-primary btnNextWaiters" type="submit" to="Menu">Siguiente</Link>
+        </form>
     );
 };
 
