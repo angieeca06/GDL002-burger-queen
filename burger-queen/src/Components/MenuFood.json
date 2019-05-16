@@ -1,0 +1,50 @@
+[
+    {
+        "Item": "Hamburguesa simple",
+        "Sabores": ["Res", "Pollo", "Vegetariana"],
+        "Price": 10,
+        "Image": "https://d701vexhkz032.cloudfront.net/media/images/menu-content/AR/sandwiches-de-carne/56e0840bcc6eb0.82482509_mc-nifica.png"
+    },
+    {
+        "Item": "Hamburguesa doble",
+        "Sabores": ["Res", "Pollo", "Vegetariana"],
+        "Price": 15,
+        "Image": "https://i2.wp.com/elmenu.com.mx/Demo/wp-content/uploads/2018/12/doble-piso.png?w=442&ssl=1"
+    },
+    {
+        "Item": "Papas fritas",
+        "Sabores": null,
+        "Price": 5,
+        "Image": "https://i0.wp.com/diariolavoz.net/wp-content/uploads/2018/07/ketchup-752x440.jpg?resize=490%2C287&ssl=1"
+    },
+    {
+        "Item": "Aros de cebolla",
+        "Sabores": null,
+        "Price": 5,
+        "Image": "https://mejorconsalud.com/wp-content/uploads/2015/04/aros-de-cebolla-500x335.jpg"
+    },
+    {
+        "Item": "Agua 500ml",
+        "Sabores": null,
+        "Price": 5,
+        "Image": "http://clarovatten.com/wp-content/uploads/2015/06/aguaCiel-VARIOS-1-LT.jpg"
+    },
+    {
+        "Item": "Agua 750ml",
+        "Sabores": null,
+        "Price": 7,
+        "Image": "https://i.pinimg.com/564x/79/66/88/7966889c73774dc9f18cea84f1b6a73e.jpg"
+    },
+    {
+        "Item": "Gaseosa 500ml",
+        "Sabores": null,
+        "Price": 7,
+        "Image": "https://www.cornerdeli.mx/wp-content/uploads/2016/12/refrescos-500ml.jpg"
+    },
+    {
+        "Item": "Gaseosa 750ml",
+        "Sabores": null,
+        "Price": 10,
+        "Image": "http://www.trouville.uy/saltoclub/wp-content/uploads/2016/02/app_0019_Coca-Cola-1.5lts-1.jpg"
+    }
+]
