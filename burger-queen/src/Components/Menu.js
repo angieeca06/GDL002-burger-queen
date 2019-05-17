@@ -1,7 +1,21 @@
-import React from "react";
+import React, {Component} from "react";
 import Menu from "../Components/MenuBreakfast.json";
+import btnAdd from "./btnAdd"
 
-const showMenu = props => {
+class showMenu extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            count: 0
+        };
+    };
+
+    handleIncrement = () =>{
+        this.setState({
+            count: this.state.count + 1
+        });
+    };
+    render(){
     return(
         <div>
             <form>
@@ -23,7 +37,9 @@ const showMenu = props => {
                             <div className="card-body col-md-20">
                                 <h5 className="card-title">{menuDetail.Item}</h5>
                                 <p className="card-text">{"$" + menuDetail.Price}</p>
-                                <button className="btn btn-block btn-outline-primary"> Add +</button>                       
+                                <p>{this.state.count}</p>
+                                {/* <button onClick={this.handleIncrement} className="btn btn-block btn-outline-primary"> Add +</button>    */}
+                                <btnAdd/>
                             </div>
                         </div>
                     </div>
@@ -32,6 +48,7 @@ const showMenu = props => {
             </div>
         </div>
     );
+}
 };
 
 export default showMenu;

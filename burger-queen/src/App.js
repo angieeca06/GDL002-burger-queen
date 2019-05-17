@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <Navbar title="Burger Queen"/>
         <Route exact path="/Meseros" render={() => <SignUpWaiters/>} />
-        <Route exact path="/Menu" render={() => <Menu/>} />
+        <Route exact path="/Menu" render={() => <Menu/> } />
       </div>
     </BrowserRouter>
   );
