@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
 import * as firebase from 'firebase'
 
 const config = {
-    apiKey: "AIzaSyCAr4rGXUKgfXvTPdJJfiqPIxjXCkUFL9o",
-    authDomain: "burger-queen-16d82.firebaseapp.com",
-    databaseURL: "https://burger-queen-16d82.firebaseio.com",
-    projectId: "burger-queen-16d82",
-    storageBucket: "burger-queen-16d82.appspot.com",
-    messagingSenderId: "1079913154006",
-    appId: "1:1079913154006:web:ff46b6b400809db2"
+        apiKey: "AIzaSyAyWtbEQlNhTLYbVxq8rGY2PKav7UOJl0Y",
+        authDomain: "burguerqueen1-be3a3.firebaseapp.com",
+        databaseURL: "https://burguerqueen1-be3a3.firebaseio.com",
+        projectId: "burguerqueen1-be3a3",
+        storageBucket: "burguerqueen1-be3a3.appspot.com",
+        messagingSenderId: "688371913645",
+        appId: "1:688371913645:web:179fac4b35000953"
 }
-firebase.initializeApp(config)
+firebase.initializeApp(firebaseConfig);
+
 

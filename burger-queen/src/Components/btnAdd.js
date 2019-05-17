@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 
-
 class btnAdd extends Component{
     constructor(props){
         super(props);
@@ -12,14 +11,16 @@ class btnAdd extends Component{
     handleIncrement = () =>{
         this.setState({
             count: this.state.count + 1
+
         });
     };
 
     render(){
         return(
             <div>
-                 <p>{this.state.count}</p>
-                <button onClick={this.handleIncrement} className="btn btn-block btn-outline-primary"> Add +</button>   
+                <p>{this.state.count}</p>
+                <button onClick={this.handleIncrement} className="btn btn-block btn-outline-primary"> Add +</button>  
+                {console.log(this)} 
             </div>
         )
     }

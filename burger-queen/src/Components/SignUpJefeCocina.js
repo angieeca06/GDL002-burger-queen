@@ -1,9 +1,11 @@
 import React from "react";
+import Navbar from "./NavbarRegister";
 import {Link} from "react-router-dom";
 
 const signUpChef = props =>{
     return(
         <form>
+            <Navbar/>
             <div className= "form-row">
                 <div className= "col-md-8 mb-6">
                 <br/>
@@ -26,7 +28,7 @@ const signUpChef = props =>{
                 <div className= "col-md-8 mb-6">
                 <br/>
                     <label for="validationCustom03"># de empleado</label>
-                    <input type={"email"} className="form-control" id="validationCustom03" placeholder="# de empleado" required></input>
+                    <input type={"number"} className="form-control" id="validationCustom03" placeholder="# de empleado" required></input>
                     <div class="valid-feedback">
                         Looks good!
                     </div>

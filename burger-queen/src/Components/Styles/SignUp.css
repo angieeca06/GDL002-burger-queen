@@ -17,11 +17,15 @@ code{
     margin: auto;
 }
 
-background-image{
-    opacity: 0.5;
+.letter{
+    font-size: 30px;
 }
 
-.navBar{
+/* background-image{
+    opacity: 0.5;
+} */
+
+/* .navBar{
     display: inline;
     justify-content: space-between;
     border-bottom: 1px solid gray;
@@ -34,7 +38,7 @@ background-image{
 }
 
 
-/* .nav-bar{
+ .nav-bar{
     display: inline-block;
     margin: 5px;
     border: 1px solid transparent;
@@ -42,7 +46,7 @@ background-image{
     border-radius: 5px;
     padding: 20px 180px;
     background-color: transparent;
-} */
+} 
 
 .nav-menu li:hover{
     background-image: url ("../Images/Background.jpg");
@@ -50,4 +54,4 @@ background-image{
     background-color: transparent;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-}
+} */
