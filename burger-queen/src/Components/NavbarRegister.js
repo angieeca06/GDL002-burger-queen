@@ -7,7 +7,7 @@ const navBar = props => {
         <nav className="navBar">
             <ul className = "nav justify-content-center">
                 <li className="nav-item"><Link className="nav-link active" to="Meseros">Meseros</Link></li>
-                <li className="nav-item"><Link className="nav-link active" to="JefeDeMeseros">Jefe de meseros</Link></li>
+                <li className="nav-item"><Link className="nav-link active" to="Chef">Chef</Link></li>
             </ul>
         </nav>
     );
