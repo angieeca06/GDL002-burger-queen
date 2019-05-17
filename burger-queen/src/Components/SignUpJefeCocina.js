@@ -27,8 +27,8 @@ const signUpChef = props =>{
                 <br/>
                 <div className= "col-md-8 mb-6">
                 <br/>
-                    <label for="validationCustom03"># de empleado</label>
-                    <input type={"number"} className="form-control" id="validationCustom03" placeholder="# de empleado" required></input>
+                    <label for="validationCustom03">No. de empleado</label>
+                    <input type={"number"} className="form-control" id="validationCustom03" placeholder="Número de empleado" required></input>
                     <div class="valid-feedback">
                         Looks good!
                     </div>

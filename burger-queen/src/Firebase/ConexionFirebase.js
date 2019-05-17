@@ -1,7 +1,13 @@
+import React from "react";
+import firebase from "./InicializacionFirebase";
+
 class App extends Component {
     constructor () {
       super()
-      this.state = { name: 'Pepe' }
+      this.state = { 
+        Comida: [],
+        Desayuno: [] 
+      }
     }
   }
 
