@@ -6,7 +6,7 @@ export class Comanda extends React.Component{
             return(
                 <div>
                     <ul key={i} className="list-group col-md-12">
-                        <li className="list-group-item d-flex justify-content-between align-items-center col-md-6">
+                        <li className="list-group-item d-flex justify-content-between align-items-center col-md-12">
                             {food.Item}
                             <span className="btn btn-success">{"$" + " " + food.Price}</span>
                         </li>

@@ -54,7 +54,10 @@ componentDidMount() {
             <br/>
             <InputName/>
               <br/>
-              <div className="all-card col-md-6 bg-transparent justify-content-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                        <div className="all-card col-md-12 bg-transparent justify-content-center">
                   {this.state.Desayuno.map((menuDetail, i) =>
                   <div className="card mb-4 card" key={i}>
                       <button className="row no-gutters " onClick={()=>{
@@ -74,7 +77,13 @@ componentDidMount() {
                   </div>
                   )}
               </div>
-                <Comanda foodOrder={this.state.Ordenes}/>
+                        </div>
+                        <div class="col">
+                            <Comanda foodOrder={this.state.Ordenes}/>
+                        </div>
+                    </div>
+                </div>
+              
             </div>
       )
     }   
