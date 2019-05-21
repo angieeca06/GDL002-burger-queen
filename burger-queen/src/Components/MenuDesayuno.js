@@ -48,7 +48,6 @@ componentDidMount() {
 }
     
     render(){
-        console.log(this.state.Ordenes)
       return(
         <div className="justify-content-center">
             <NavbarFood/>
@@ -56,8 +55,8 @@ componentDidMount() {
             <InputName/>
               <br/>
               <div className="all-card col-md-6 bg-transparent justify-content-center">
-                  {this.state.Desayuno.map((menuDetail) =>
-                  <div className="card mb-4 card ">
+                  {this.state.Desayuno.map((menuDetail, i) =>
+                  <div className="card mb-4 card" key={i}>
                       <button className="row no-gutters " onClick={()=>{
                             this.submit(menuDetail.Item, menuDetail.Price)}}
                             type="submit">

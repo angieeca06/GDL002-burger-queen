@@ -52,8 +52,8 @@ class ShowMenuWithFirebase extends Component {
                         <InputName/>
                         <br/>
                         <div className="all-card col-md-6 bg-transparent justify-content-center">
-                            {this.state.Comida.map((menuDetail) =>
-                            <div className="card mb-4 card">
+                            {this.state.Comida.map((menuDetail, i) =>
+                            <div className="card mb-4 card" key={i}>
                                 <button className="row no-gutters" onClick={()=>{
                             this.submit(menuDetail.Item, menuDetail.Price)}}
                             type="submit">

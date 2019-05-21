@@ -2,7 +2,6 @@ import React from "react";
 
 export class Comanda extends React.Component{
     render(){
-        console.log(this.props.foodOrder)
         const order = this.props.foodOrder.map((food, i) => {
             return(
                 <div>
