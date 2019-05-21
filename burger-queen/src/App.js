@@ -6,6 +6,7 @@ import SignUpChef from "./Components/SignUpJefeCocina";
 import MenuDesayuno from "./Components/MenuDesayuno";
 import MenuCena from "./Components/MenuCena";
 import NavbarFood from "./Components/NavbarFood";
+import "./Components/Styles/SignUp.css";
 
 function App() {
   return(
@@ -15,7 +16,7 @@ function App() {
         <Route exact path="/NavbarFood" render={() => <NavbarFood/>} />
         <Route exact path="/Meseros" render={() => <SignUpWaiters/>} />
         <Route exact path="/Chef" render={() => <SignUpChef/>} />
-        <Route exact path="/MenuDesayuno" render={() => <MenuDesayuno/> } />
+        <Route exact path="/MenuDesayuno" render={() => <MenuDesayuno/>} />
         <Route exact path="/MenuCena" render={() => <MenuCena/>} />
       </div>
     </BrowserRouter>

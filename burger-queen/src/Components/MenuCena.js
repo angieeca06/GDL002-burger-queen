@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import firebase from "../Firebase/InicializacionFirebase";
 import NavbarFood from "./NavbarFood";
 import BtnAdd from "./BtnAdd"
+import Comanda from "./Comanda";
+import InputName from "./InputName";
 
 class ShowMenuWithFirebase extends Component {
     constructor () {
@@ -11,6 +13,17 @@ class ShowMenuWithFirebase extends Component {
         Desayuno: [],
         Ordenes: []
       }
+    }
+
+    submit(Item,Price) {
+        const order = {
+        Item: Item,
+        Price: Price
+        }
+
+        this.setState({
+            Ordenes: [...this.state.Ordenes, order]
+        })
     }
     componentDidMount() {
         const FoodRef = firebase.database().ref("Comida");
@@ -33,36 +46,34 @@ class ShowMenuWithFirebase extends Component {
             }
 
             render(){
+                console.log(this.state.Ordenes)
                 return(
                 <div>
                         <NavbarFood/>
-                        <form>
-                            <div className= "col-md-12 mb-6">
-                                <br/>
-                                <input type={"text"} className="form-control form-control-lg" placeholder="Nombre del cliente" required></input>
-                                
-                            </div>
-                        </form>
                         <br/>
+                        <InputName/>
                         <br/>
-                        <div className="all-card card col-md-6">
+                        <div className="all-card col-md-6 bg-transparent justify-content-center">
                             {this.state.Comida.map((menuDetail) =>
                             <div className="card mb-4 card">
-                                <div className="row no-gutters">
-                                    <div className="col-md-5">
+                                <button className="row no-gutters" onClick={()=>{
+                            this.submit(menuDetail.Item, menuDetail.Price)}}
+                            type="submit">
+                                    <div className="col-md-6">
                                         <img src={menuDetail.Image} className="card-img" alt=""/>
                                     </div>
-                                    <div className="col-md-5">
-                                        <div className="card-body col-md-20">
+                                    <div className="col-md-6">
+                                        <div className="card-body col-md-12">
                                             <h5 className="card-title">{menuDetail.Item}</h5>
                                             <p className="card-text">{"$" + menuDetail.Price}</p>
                                             <BtnAdd/>
                                         </div>
                                     </div>
-                                </div>
+                                </button>
                             </div>
                             )}
                         </div>
+                        <Comanda/>
                     </div>
                 )
             }

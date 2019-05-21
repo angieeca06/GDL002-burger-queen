@@ -8,25 +8,27 @@ class btnAdd extends Component{
         };
     };
 
-    handleIncrement = () =>{
+    btnIncrement = () =>{
         this.setState({
             count: this.state.count + 1
-
         });
     };
+
+    btnDecrement = () =>{
+        this.setState({
+            count: this.state.count -1
+        })
+    }
 
     render(){
         return(
             <div>
                 <p>{this.state.count}</p>
-                <button onClick={this.handleIncrement} className="btn btn-block btn-outline-primary"> Add +</button>  
-                {console.log(this)} 
+                <button onClick={this.btnIncrement} className="btn btn-block btn-outline-primary col-md-12">+</button> 
+                <button onClick={this.btnDecrement} className="btn btn-block btn-outline-primary col-md-12">-</button>   
             </div>
         )
-    }
-
-
-    
+    }    
 }
 
 export default btnAdd;
