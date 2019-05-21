@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import firebase from "../Firebase/InicializacionFirebase";
 import NavbarFood from "./NavbarFood";
-import BtnAdd from "./BtnAdd";
 import "./Styles/SignUp.css";
 import InputName from "./InputName";
 import Comanda from "./Comanda";
@@ -69,15 +68,15 @@ componentDidMount() {
                               <div className="card-body  col-md-12">
                                   <h5 className="card-title">{menuDetail.Item}</h5>
                                   <p className="card-text">{"$" + menuDetail.Price}</p>
-                                  <BtnAdd/>
+                                  {/* <BtnAdd/> */}
                               </div>
                           </div>
                       </button>
                   </div>
                   )}
               </div>
-              <Comanda foodOrder= {this.state.Ordenes}/>
-          </div>
+                <Comanda foodOrder={this.state.Ordenes}/>
+            </div>
       )
     }   
   }

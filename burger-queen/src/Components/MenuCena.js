@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import firebase from "../Firebase/InicializacionFirebase";
 import NavbarFood from "./NavbarFood";
-import BtnAdd from "./BtnAdd"
 import Comanda from "./Comanda";
 import InputName from "./InputName";
 
@@ -46,7 +45,6 @@ class ShowMenuWithFirebase extends Component {
             }
 
             render(){
-                console.log(this.state.Ordenes)
                 return(
                 <div>
                         <NavbarFood/>
@@ -66,14 +64,13 @@ class ShowMenuWithFirebase extends Component {
                                         <div className="card-body col-md-12">
                                             <h5 className="card-title">{menuDetail.Item}</h5>
                                             <p className="card-text">{"$" + menuDetail.Price}</p>
-                                            <BtnAdd/>
                                         </div>
                                     </div>
                                 </button>
                             </div>
                             )}
                         </div>
-                        <Comanda/>
+                        <Comanda foodOrder={this.state.Ordenes}/>
                     </div>
                 )
             }
