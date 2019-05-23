@@ -14,6 +14,20 @@ class ShowMenuWithFirebase extends Component {
       }
     }
 
+    updateName ( key, value){
+        this.setState ({
+            [key]:value
+        })
+    }
+    
+    addName (e){
+        e.preventDefault(e);
+        
+        this.setState({
+            name: this.state.name + e.target.value
+        });
+    }
+
     submit(Item,Price) {
         const order = {
         Item: Item,
