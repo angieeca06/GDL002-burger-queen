@@ -1,5 +1,4 @@
 import React from "react";
-import "./Styles/Menu.css";
 
 class input extends React.Component{
     constructor(){
@@ -28,17 +27,17 @@ class input extends React.Component{
     render(){
     return (
         <form>
-            <div className= "col-md-12 d-flex justify-content-center" >
+            <div className= "col-md-12  justify-content-center" >
             <br/>
             <input 
                 type={"text"} 
                 id={"clientName"} 
                 value={this.state.name}
-                className="form-control form-control-lg col-md-11 background" 
+                className="form-control form-control-lg col-md-12 background" 
                 placeholder="Nombre del cliente" 
                 onChange={e => this.updateName('name', e.target.value)} 
                 required />
-            <button type="submit" className="btn btn-success col-md-2" onClick={(e) => this.addName(e)}>Enviar</button>
+            {/* <button type="submit" className="btn btn-success col-md-2">Enviar</button> */}
             </div>
         </form> 
     )

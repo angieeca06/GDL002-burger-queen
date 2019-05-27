@@ -1,14 +1,21 @@
 import React, {Component} from "react";
 import firebase from "../Firebase/InicializacionFirebase";
 import "./Styles/SignUp.css";
-import "./Styles/Menu.css";
 import Comanda from "./Comanda"
 
 class foodMenu extends Component{
 
-    state = {
-        dinner : [],
-        orders: []
+    constructor(){
+        super();
+
+        this.state={
+            dinner : [],
+            orders: [], 
+            total: 0
+        }
+
+    this.sumItem = this.sumItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
     }
 
     submit(Item, Price) {
@@ -41,6 +48,24 @@ class foodMenu extends Component{
             });
     }
 
+    deleteItem(e, menu){
+        e.preventDefault(e)
+        this.setState(prevState => ({
+            orders: prevState.orders.filter(element => element !== menu)
+        }))
+    }
+
+    sumItem () {
+        const itemPrice = this.state.orders.map((el) => el.Price)
+        const products = itemPrice.reduce((sum, result) =>{
+            return sum + result;
+        });
+
+        this.setState({
+            total: products
+        })
+    }
+
     render() {
         return(
             <div className="container">
@@ -67,7 +92,8 @@ class foodMenu extends Component{
                         </div>
                     </div>
                     <div className="col bg-transparent">
-                        <Comanda foodOrder={this.state.orders} />
+                        <Comanda foodOrder={this.state.orders} clickDelete = {this.deleteItem} />
+                        <button onClick={this.sumItem}>Total: $ {this.state.total}</button>
                     </div>
                 </div>
             </div>
