@@ -2,10 +2,19 @@ import React from "react";
 
 export class Comanda extends React.Component{
 
+    // constructor(){
+    //     super();
+
+    //     this.state = {
+    //         total: 0
+    //     }
+
+    //     this.sumOrder = this.sumOrder.bind(this);
+    // }
 
 
     render(){
-        console.log(this.props.name);
+        console.log(this.props.foodOrder);
         const order = this.props.foodOrder.map((food, i) => {
             return(
                 <div>

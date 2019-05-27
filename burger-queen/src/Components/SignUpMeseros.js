@@ -35,7 +35,7 @@ const signUpWaiters = props =>{
                     <br/>
                 </div>
             </div>
-            <Link className=" btn btn-primary btnNextWaiters" type="submit" to="NavbarFood">Siguiente</Link>
+            <Link className=" btn btn-primary btnNextWaiters" type="submit" to="/navbarFood">Siguiente</Link>
         </form>
     );
 };
