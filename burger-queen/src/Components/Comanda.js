@@ -1,20 +1,9 @@
 import React from "react";
+import ClientName from "./InputName"
 
 export class Comanda extends React.Component{
 
-    // constructor(){
-    //     super();
-
-    //     this.state = {
-    //         total: 0
-    //     }
-
-    //     this.sumOrder = this.sumOrder.bind(this);
-    // }
-
-
     render(){
-        console.log(this.props.foodOrder);
         const order = this.props.foodOrder.map((food, i) => {
             return(
                 <div>
@@ -29,7 +18,10 @@ export class Comanda extends React.Component{
             )
         })
         return(
-            order
+            <div>
+                <ClientName/>
+                {order}
+            </div>
         )
     }
 }

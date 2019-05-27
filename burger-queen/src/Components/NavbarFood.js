@@ -1,7 +1,7 @@
 import React from "react";
 import "./Styles/SignUp.css";
-import BreakfastMenu from "./MenuDesayuno"
-import FoodMenu from "./MenuCena"
+import BreakfastMenu from "./MenuDesayuno";
+import FoodMenu from "./MenuCena";
 import {Link} from "react-router-dom";
 
 class btnsMenu extends React.Component{
