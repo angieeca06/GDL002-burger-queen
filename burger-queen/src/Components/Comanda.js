@@ -23,7 +23,6 @@ export class Comanda extends React.Component{
         })
         return(
             <div>
-                <ClientName/>
                 {order}
             </div>
         )

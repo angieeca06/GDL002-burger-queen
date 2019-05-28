@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import firebase from "../Firebase/InicializacionFirebase";
 import Comanda from "./Comanda"
+import BtnSubmitToKitchen from "./btnSubmitChef";
+import ClientName from "./InputName";
 
 class breakfastMenu extends Component{
 
@@ -73,7 +75,6 @@ class breakfastMenu extends Component{
                         <div className="all-card col-md-12 bg-transparent justify-content-center">
                         {this.state.breakfast.map((menuDetail, i) =>
                             <div className="card mb-4 card" key={i}>
-                                {console.log(menuDetail.id)}
                                 <button className="row no-gutters " id={menuDetail.id} onClick={ () =>{
                                     this.submit(menuDetail.Item, menuDetail.Price)}}
                                     type="submit">
@@ -92,8 +93,10 @@ class breakfastMenu extends Component{
                         </div>
                     </div>
                     <div className="col bg-transparent">
+                        <ClientName/>
                         <Comanda foodOrder={this.state.orders} clickDelete = {this.deleteItem}/>
-                        <button onClick={this.sumItem}>Total: $ {this.state.total}</button>
+                        <button className="btn btn-outline-info col-md-11" onClick={this.sumItem}>Total: $ {this.state.total}</button>
+                        <BtnSubmitToKitchen order={this.state.orders} ClientName={<ClientName/>} />
                     </div>
                 </div>
             </div>
