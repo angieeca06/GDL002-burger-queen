@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import firebase from "../Firebase/InicializacionFirebase";
 import "./Styles/SignUp.css";
 import Comanda from "./Comanda"
+import BtnSubmitToKitchen from "./btnSubmitChef";
+import ClientName from "./InputName";
 
 class foodMenu extends Component{
 
@@ -92,8 +94,10 @@ class foodMenu extends Component{
                         </div>
                     </div>
                     <div className="col bg-transparent">
+                        <ClientName/>
                         <Comanda foodOrder={this.state.orders} clickDelete = {this.deleteItem} />
-                        <button onClick={this.sumItem}>Total: $ {this.state.total}</button>
+                        <button className="btn btn-outline-info col-md-11" onClick={this.sumItem}>Total: $ {this.state.total}</button>
+                        <BtnSubmitToKitchen order={this.state.orders} ClientName={<ClientName/>} />
                     </div>
                 </div>
             </div>
