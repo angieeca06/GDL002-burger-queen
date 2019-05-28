@@ -2,7 +2,7 @@
   "name": "burger-queen",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://angieeca06.github.io/GDL002-burger-queen",
+  "homepage": "https://angieeca06.github.io/GDL002-burger-queen/",
   "dependencies": {
     "firebase": "^6.0.2",
     "gh-pages": "^2.0.1",
