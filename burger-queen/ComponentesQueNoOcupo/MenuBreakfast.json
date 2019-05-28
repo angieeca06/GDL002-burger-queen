@@ -1,0 +1,26 @@
+[
+    {
+        "Item": "Café americano",
+        "Sabores": null,
+        "Price": 5,
+        "Image": "http://www.drradio.com.mx/wp-content/uploads/2017/06/Coffee-Cup-Bowl-With-Grains-Images-768x432.jpg"
+    },
+    {
+        "Item": "Café con leche",
+        "Sabores": null,
+        "Price": 7,
+        "Image": "https://i2.wp.com/www.mamalatinatips.com/wp-content/uploads/2018/09/cafe-con-leche-guanajuato-mlt.jpg?w=800&ssl=1"
+    },
+    {
+        "Item": "Sandwich de jamón y queso",
+        "Sabores": null,
+        "Price": 10,
+        "Image": "https://scm-assets.constant.co/scm/unilever/1d398653b55393fd6da9bff8ea193338/c1dceca7-09b1-489b-9c7d-0efcdce72860.jpg"
+    },
+    {
+        "Item": "Jugo de frutas natural",
+        "Sabores" : ["Naranja", "Zanahoria"],
+        "Price": 7,
+        "Image": "https://mejorconsalud.com/wp-content/uploads/2015/09/jugos-para-tomar-en-ayunas-500x339.jpg"
+    }
+]
