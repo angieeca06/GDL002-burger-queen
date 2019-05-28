@@ -5,6 +5,7 @@ import SignUpWaiters from "./Components/SignUpMeseros";
 import SignUpChef from "./Components/SignUpJefeCocina";
 import NavbarFood from "./Components/NavbarFood";
 import "./Components/Styles/SignUp.css";
+import ChefOrders from "./Components/ordersChef";
 
 class App extends Component {
 
@@ -17,6 +18,7 @@ render() {
           <Route exact path="/navbarFood" component={NavbarFood} />
           <Route exact path="/meseros" component={SignUpWaiters} />
           <Route exact path="/chef" component={SignUpChef} />
+          <Route exact path="/navbarOrders" component={ChefOrders} />
         </Switch>
       </div>
     </HashRouter >
