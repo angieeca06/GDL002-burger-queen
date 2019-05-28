@@ -1,5 +1,4 @@
 import React from "react";
-import ClientName from "./InputName"
 
 export class Comanda extends React.Component{
 

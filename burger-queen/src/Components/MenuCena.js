@@ -96,7 +96,7 @@ class foodMenu extends Component{
                     <div className="col bg-transparent">
                         <ClientName/>
                         <Comanda foodOrder={this.state.orders} clickDelete = {this.deleteItem} />
-                        <button className="btn btn-outline-info col-md-11" onClick={this.sumItem}>Total: $ {this.state.total}</button>
+                        <button className="btn btn-info col-md-11" onClick={this.sumItem}>Total: $ {this.state.total}</button>
                         <BtnSubmitToKitchen order={this.state.orders} ClientName={<ClientName/>} />
                     </div>
                 </div>
