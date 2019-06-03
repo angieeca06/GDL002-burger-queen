@@ -7,36 +7,80 @@ class foodOrders extends React.Component{
         super();
 
         this.state={
-            orders: []
+            ordersChef: [], 
+            counter: 0
         }
     }
 
-    componentDidMount(){
-        let listOrders = [];
-        const foodOrdersRef = firebase.database().ref("Ordenes");
-        foodOrdersRef.on("value", (s) => {
-            let orders = s.val();
-            for(let order in orders){
-                listOrders.push({
-                    id: orders[order].id,
-                    Item: orders[order].Item
-                });
-            }
-            this.setState({ orders: listOrders });
+    componentWillMount(){
+        function snapshotToArray(snapshot){
+            let orders = []
+
+            snapshot.forEach(order => {
+                const items = order.val();
+                items.key = order.key;
+
+                orders.push(items)
+            });
+            return orders
+        }
+        const dbFoodOrdersRef = firebase.database().ref();
+        const foodOrdersRef = dbFoodOrdersRef.child("Ordenes/");
+        foodOrdersRef.on("value", s=>{
+            const ordersForArray = snapshotToArray(s);
+            this.setState({
+                ordersChef: ordersForArray
+            })
         })
+        
+        // const orderArray = []
+        // foodOrdersRef.on("value", (s) => {
+        //     let allOrders = s.val();
+        //     // console.log(allOrders)
+        //     const objectOrders = Object.values(allOrders)
+        //     for(let objectOrder in objectOrders){
+        //         objectOrders[objectOrder].map((value, i) =>{
+        //         orderArray.push({
+        //             Item: value.Item,
+        //             Id: objectOrder
+        //         })
+        //         })
+        //         // console.log([objectOrder].Item)
+        //         this.setState({ ordersChef: orderArray })
+        //     }
+        // })
     }
 
     render(){
+        console.log(this.state.ordersChef)
         return(
-            <div className="card">
-                <ul className="list-group list-group-flush">
-                    {this.state.orders.map((orders, i)=>
-                        <div key={i}>
-                            <li className="list-group-item">{orders.Item}</li>
+            <div class="card">
+                {this.state.ordersChef.map((orders, i) =>
+                <div class="card-body">
+                    <h5 class="card-title">Orden #{i+1}</h5>
+                    <div>
+                        {console.log(orders)}
+                        {orders.map((item, i)=>
+                        <div>
+                            <p class="card-text"></p>
+                            <a class="card-link">{item.Item}</a>
+                            <a class="card-link">{item.Price}</a>
                         </div>
                         )}
-                </ul>
+                    </div>      
+                </div>
+                )}
             </div>
+            // <div>
+            //     {this.state.ordersChef.map((order, i) => 
+            //     <div className="card border-info mb-3">
+            //         <div className="card-header">{order.id}</div>
+            //         <div className="card-body text-info">
+            //             <p className="card-text">{order.Item}</p>
+            //         </div>
+            //     </div>
+            //     )}
+            // </div>
         )
     }
 }

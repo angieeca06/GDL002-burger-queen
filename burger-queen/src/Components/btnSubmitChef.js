@@ -10,11 +10,9 @@ class btnSubmitToKitchen extends React.Component {
     }
     updateOrderToFirebase = props =>{
         let order = this.props.order;
-        const foodOrder =  firebase.database().ref('Ordenes/').child("order").push().key;
-        let updates = {};
-        updates["Ordenes/" + foodOrder] = order;
-        return (firebase.database().ref().update(updates), order="")
-
+        const foodOrderFirebase = firebase.database().ref();
+        const foodOrder = foodOrderFirebase.child("Ordenes/").push(order);
+        return foodOrder;
     }
 
     render() {
