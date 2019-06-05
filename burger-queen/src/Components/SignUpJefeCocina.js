@@ -35,7 +35,7 @@ const signUpChef = props =>{
                     <br/>
                 </div>
             </div>
-            <Link className=" btn btn-primary btnNextWaiters" type="submit">Siguiente</Link>
+            <Link className=" btn btn-primary btnNextWaiters" type="submit" to="/navbarOrders">Siguiente</Link>
         </form>
     );
 };

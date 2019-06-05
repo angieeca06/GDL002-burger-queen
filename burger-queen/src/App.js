@@ -1,25 +1,27 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {HashRouter , Route, Switch} from "react-router-dom";
 import Navbar from "./Components/NavbarRegister";
 import SignUpWaiters from "./Components/SignUpMeseros";
 import SignUpChef from "./Components/SignUpJefeCocina";
 import NavbarFood from "./Components/NavbarFood";
 import "./Components/Styles/SignUp.css";
+import ChefOrders from "./Components/ordersChef";
 
 class App extends Component {
 
 render() {
   return(
-    <BrowserRouter>
+    <HashRouter basename="/">
       <div className="App">
         <Switch>
           <Route exact path="/" component={Navbar} />
           <Route exact path="/navbarFood" component={NavbarFood} />
           <Route exact path="/meseros" component={SignUpWaiters} />
           <Route exact path="/chef" component={SignUpChef} />
+          <Route exact path="/navbarOrders" component={ChefOrders} />
         </Switch>
       </div>
-    </BrowserRouter>
+    </HashRouter >
   );
   
 };
