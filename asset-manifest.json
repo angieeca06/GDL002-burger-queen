@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/angieeca06/GDL002-burger-queen/static/css/main.ba49ec77.chunk.css",
-    "main.js": "/angieeca06/GDL002-burger-queen/static/js/main.6baa2486.chunk.js",
-    "main.js.map": "/angieeca06/GDL002-burger-queen/static/js/main.6baa2486.chunk.js.map",
-    "runtime~main.js": "/angieeca06/GDL002-burger-queen/static/js/runtime~main.5494e51a.js",
-    "runtime~main.js.map": "/angieeca06/GDL002-burger-queen/static/js/runtime~main.5494e51a.js.map",
-    "static/js/2.b41502e9.chunk.js": "/angieeca06/GDL002-burger-queen/static/js/2.b41502e9.chunk.js",
-    "static/js/2.b41502e9.chunk.js.map": "/angieeca06/GDL002-burger-queen/static/js/2.b41502e9.chunk.js.map",
-    "index.html": "/angieeca06/GDL002-burger-queen/index.html",
-    "precache-manifest.fe3ee98fb69df5405faa9fafa6ecb01a.js": "/angieeca06/GDL002-burger-queen/precache-manifest.fe3ee98fb69df5405faa9fafa6ecb01a.js",
-    "service-worker.js": "/angieeca06/GDL002-burger-queen/service-worker.js",
-    "static/css/main.ba49ec77.chunk.css.map": "/angieeca06/GDL002-burger-queen/static/css/main.ba49ec77.chunk.css.map",
-    "static/media/logo.svg": "/angieeca06/GDL002-burger-queen/static/media/logo.ee7cd8ed.svg"
+    "main.css": "/GDL002-burger-queen/static/css/main.1c2c5826.chunk.css",
+    "main.js": "/GDL002-burger-queen/static/js/main.23f89c40.chunk.js",
+    "main.js.map": "/GDL002-burger-queen/static/js/main.23f89c40.chunk.js.map",
+    "runtime~main.js": "/GDL002-burger-queen/static/js/runtime~main.2601196f.js",
+    "runtime~main.js.map": "/GDL002-burger-queen/static/js/runtime~main.2601196f.js.map",
+    "static/js/2.eb18f4a1.chunk.js": "/GDL002-burger-queen/static/js/2.eb18f4a1.chunk.js",
+    "static/js/2.eb18f4a1.chunk.js.map": "/GDL002-burger-queen/static/js/2.eb18f4a1.chunk.js.map",
+    "index.html": "/GDL002-burger-queen/index.html",
+    "precache-manifest.f3d08c074c5f686392d46c28b43f17c3.js": "/GDL002-burger-queen/precache-manifest.f3d08c074c5f686392d46c28b43f17c3.js",
+    "service-worker.js": "/GDL002-burger-queen/service-worker.js",
+    "static/css/main.1c2c5826.chunk.css.map": "/GDL002-burger-queen/static/css/main.1c2c5826.chunk.css.map"
   }
 }
