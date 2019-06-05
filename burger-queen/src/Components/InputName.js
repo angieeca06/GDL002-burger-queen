@@ -7,13 +7,13 @@ class input extends React.Component{
         this.state = {
             name : ""
         }
-
         this.addName = this.addName.bind(this);
     }
 
     updateName ( key, value){
+        const name = value
         this.setState ({
-            [key]:value
+            [key]:name
         })
     }
 
@@ -37,7 +37,6 @@ class input extends React.Component{
                 placeholder="Nombre del cliente" 
                 onChange={e => this.updateName('name', e.target.value)} 
                 required />
-            {/* <button type="submit" className="btn btn-success col-md-2">Enviar</button> */}
             </div>
         </form> 
     )

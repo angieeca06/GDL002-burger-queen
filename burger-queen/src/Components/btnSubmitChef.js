@@ -1,5 +1,5 @@
 import React from "react";
-import firebase from "../Firebase/InicializacionFirebase"
+import firebase from "../Firebase/InicializacionFirebase";
 
 class btnSubmitToKitchen extends React.Component {
 
@@ -8,6 +8,7 @@ class btnSubmitToKitchen extends React.Component {
 
     this.updateOrderToFirebase = this.updateOrderToFirebase.bind(this);
     }
+
     updateOrderToFirebase = props =>{
         let order = this.props.order;
         const foodOrderFirebase = firebase.database().ref();
@@ -19,23 +20,21 @@ class btnSubmitToKitchen extends React.Component {
         return(
             <div>
                 <div className="container">
-                    {console.log(this.props.order)}
                     <button className="btn btn-outline-danger col-md-12" type="submit" data-toggle="modal" data-target="#exampleModalCenter" onClick={this.updateOrderToFirebase}>Enviar a cocina</button>
                 </div>
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered" role="document">
+                    <div className="modal-content">
+                    <div className="modal-header">
+                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div className="modal-body">
                         Orden enviada exitosamente¡
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                     </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React from "react";
-import firebase from "../Firebase/InicializacionFirebase"
+import firebase from "../Firebase/InicializacionFirebase";
+import NavbarOrders from "./NavbarChefOrders";
 
 class foodOrders extends React.Component{
 
@@ -10,6 +11,7 @@ class foodOrders extends React.Component{
             ordersChef: [], 
             counter: 0
         }
+        // this.deleteOrder = this.deleteOrder(this);
     }
 
     componentWillMount(){
@@ -32,55 +34,34 @@ class foodOrders extends React.Component{
                 ordersChef: ordersForArray
             })
         })
-        
-        // const orderArray = []
-        // foodOrdersRef.on("value", (s) => {
-        //     let allOrders = s.val();
-        //     // console.log(allOrders)
-        //     const objectOrders = Object.values(allOrders)
-        //     for(let objectOrder in objectOrders){
-        //         objectOrders[objectOrder].map((value, i) =>{
-        //         orderArray.push({
-        //             Item: value.Item,
-        //             Id: objectOrder
-        //         })
-        //         })
-        //         // console.log([objectOrder].Item)
-        //         this.setState({ ordersChef: orderArray })
-        //     }
-        // })
+    }
+
+    deleteOrder(ordenes){
+        this.setState(prevState => ({
+            ordersChef: prevState.ordersChef.filter(element => element !== ordenes)
+        }));
     }
 
     render(){
-        console.log(this.state.ordersChef)
         return(
-            <div class="card">
-                {this.state.ordersChef.map((orders, i) =>
-                <div class="card-body">
-                    <h5 class="card-title">Orden #{i+1}</h5>
-                    <div>
-                        {console.log(orders)}
-                        {orders.map((item, i)=>
+            <div>
+                <NavbarOrders/>
+                <div class="card ">
+                    {this.state.ordersChef.map((orders, i) =>
+                    <div class="card text-white bg-info">
+                        <h5 class=" card-header">Orden #{i+1}</h5>
                         <div>
-                            <p class="card-text"></p>
-                            <a class="card-link">{item.Item}</a>
-                            <a class="card-link">{item.Price}</a>
-                        </div>
-                        )}
-                    </div>      
+                            {orders.map((item, i)=>
+                            <div>
+                                <p class="card-text">{item.Item}</p>
+                            </div>
+                            )}
+                        </div>  
+                        <button onClick={(e) => this.deleteOrder(orders)}>Orden lista</button>    
+                    </div>
+                    )}
                 </div>
-                )}
             </div>
-            // <div>
-            //     {this.state.ordersChef.map((order, i) => 
-            //     <div className="card border-info mb-3">
-            //         <div className="card-header">{order.id}</div>
-            //         <div className="card-body text-info">
-            //             <p className="card-text">{order.Item}</p>
-            //         </div>
-            //     </div>
-            //     )}
-            // </div>
         )
     }
 }
