@@ -8,10 +8,8 @@ class foodOrders extends React.Component{
         super();
 
         this.state={
-            ordersChef: [], 
-            counter: 0
+            ordersChef: []
         }
-        // this.deleteOrder = this.deleteOrder(this);
     }
 
     componentWillMount(){
@@ -34,12 +32,6 @@ class foodOrders extends React.Component{
                 ordersChef: ordersForArray
             })
         })
-    }
-
-    deleteOrder(ordenes){
-        this.setState(prevState => ({
-            ordersChef: prevState.ordersChef.filter(element => element !== ordenes)
-        }));
     }
 
     render(){

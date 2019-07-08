@@ -16,10 +16,10 @@ class breakfastMenu extends Component{
 
     this.sumItem = this.sumItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
+    this.submit = this.submit.bind(this)
 }
 
     submit(Item, Price) {
-
         const order = {
             Item: Item,
             Price: Price
@@ -28,6 +28,7 @@ class breakfastMenu extends Component{
         this.setState({
             orders: [...this.state.orders, order]
         })
+
     }
 
     componentDidMount() {
@@ -76,7 +77,8 @@ class breakfastMenu extends Component{
                         {this.state.breakfast.map((menuDetail, i) =>
                             <div className="card mb-4 card" key={i}>
                                 <button className="row no-gutters " id={menuDetail.id} onClick={ () =>{
-                                    this.submit(menuDetail.Item, menuDetail.Price)}}
+                                    this.submit(menuDetail.Item, menuDetail.Price);
+                                    }}
                                     type="submit">
                                     <div className="col-md-6">
                                         <img src={menuDetail.Image} className="card-img " alt=""/>

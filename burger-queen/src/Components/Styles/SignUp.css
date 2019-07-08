@@ -2,7 +2,7 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #ccddee;
+    background-image: url("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/962868/910/606/m2/fpnw/wm1/pfnscgpbitfaw9tir0yis210lrnforj5ltwmqncca8ay6llfthfhspocw89ajmlc-.jpg?1454630902&s=1cc1c6466df91f274de0e6afaca1fc9a");
 }
 
 code{
@@ -11,14 +11,13 @@ code{
 
 .App{
     background-size: cover;
-    max-width: 1000px;
     height: 90px;
     text-align: center;
     justify-content: center;
 }
 
 .position{
-    background-color: #ccffee;
+    background-color: #ccffee91;
 }
 
 .background{
@@ -32,4 +31,19 @@ code{
 .margen{
     margin: 0;
     padding: 0;
+}
+
+.form{
+    background-color: rgba(255, 255, 255, 0.514);
+    max-width: 1150px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.btnNextWaiters{
+    color: wheat;
 }
