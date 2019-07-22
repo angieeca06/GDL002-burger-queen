@@ -27,8 +27,7 @@ class breakfastMenu extends Component{
 
         this.setState({
             orders: [...this.state.orders, order]
-        })
-
+        }, ()=> this.sumItem())
     }
 
     componentDidMount() {
@@ -58,14 +57,17 @@ class breakfastMenu extends Component{
     }
 
     sumItem () {
-        const itemPrice = this.state.orders.map((el) => el.Price)
-        const products = itemPrice.reduce((sum, result) => {
-            return sum + result;
-        });
-
-        this.setState({
-            total: products
-        })
+        const itemPrice = this.state.orders.map((el) => el.Price);
+        console.log(itemPrice)
+        if(itemPrice !== []){
+            const products = itemPrice.reduce((sum, result) => {
+                return sum + result;
+            });
+    
+            this.setState({
+                total: products
+            })
+        }
     }
 
     render() {
@@ -97,7 +99,7 @@ class breakfastMenu extends Component{
                     <div className="col bg-transparent">
                         <ClientName/>
                         <Comanda foodOrder={this.state.orders} clickDelete = {this.deleteItem}/>
-                        <button className="btn btn-info col-md-11" onClick={this.sumItem}>Total: $ {this.state.total}</button>
+                        <div className="btn btn-info col-md-11">Total: $ {this.state.total}</div>
                         <BtnSubmitToKitchen order={this.state.orders} ClientName={<ClientName/>} />
                     </div>
                 </div>
