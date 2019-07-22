@@ -62,14 +62,14 @@ class signUpChef extends React.Component{
                     <div className= "col-md-8 mb-6">
                     <br/>
                         <label>No. de empleado</label>
-                        <input type={"number"} className="form-control" onChange={this.handleChange} onChange={this.handleChange} id="password" placeholder="Número de empleado" required></input>
+                        <input type={"password"} className="form-control" onChange={this.handleChange} id="password" placeholder="Número de empleado" required></input>
                         <div className="valid-feedback">
                             Looks good!
                         </div>
                         <br/>
                     </div>
                 </div>
-                <button className=" btn btn-primary  col-md-6" type="submit" onClick={this.login}><Link className="btnNextWaiters" to="/navbarOrders">Siguiente</Link></button>
+                <button className=" btn btn-primary  col-md-6" type="submit" onClick={this.login}><Link className="btnNextWaiters" to="/chef">Siguiente</Link></button>
             </form>
         );
     }
