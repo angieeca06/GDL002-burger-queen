@@ -46,10 +46,10 @@ class foodOrders extends React.Component{
         return(
             <div>
                 <NavbarOrders/>
-                <div class="card col-md-8 bg-transparent align-content-center mx-auto inline-flex">
+                <div class="card col-md-5 bg-transparent align-content-center mx-auto inline-flex">
                     {this.state.ordersChef.map((orders, i) =>
-                    <div class="card text-white bg-transparent border col-md-3 ">
-                        <h5 class=" card-header">Orden #{i+1}</h5>
+                    <div class="card text-white backgroundChef border col-md-12 ">
+                        <h5 class=" card-header colorHeader">Orden #{i+1}</h5>
                         <div>
                             {orders.map((item, i)=>
                             <div>
@@ -59,8 +59,7 @@ class foodOrders extends React.Component{
                         </div>  
                         <button onClick={(e) => this.deleteOrder(e,orders)}>Orden lista</button>   
                         <br/>
- 
-                    </div>
+                     </div>
                     )}
                 </div>
             </div>
