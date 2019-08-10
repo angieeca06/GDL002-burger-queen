@@ -50,7 +50,6 @@ render() {
       </div>
     </HashRouter >
   );
-  
 };
 }
 export default App;

@@ -68,7 +68,7 @@ class signUpWaiters extends React.Component{
                         </div>
                         <br/>
                     </div>
-                    <button className=" btn btn-primary col-md-6" type="submit" onClick={this.login}><Link className="btnNextWaiters" to="/navbarFood">Siguiente</Link></button>
+                    <button className=" btn btn-primary col-md-6" type="submit" onClick={this.login}><Link className="btnNextWaiters" to="/meseros">Siguiente</Link></button>
                 </div>
             </form>
         );

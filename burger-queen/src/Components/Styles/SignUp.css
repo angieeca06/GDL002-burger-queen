@@ -47,3 +47,18 @@ code{
 .btnNextWaiters{
     color: wheat;
 }
+
+.backgroundChef{
+    background-color: #79e6e091;
+}
+
+.colorHeader{
+    background-color: #79e6e1bd;
+}
+
+@media only screen and (max-width: 600px) {
+    .letter{
+        font-size: 20px;
+        align-content: center
+    }
+}
